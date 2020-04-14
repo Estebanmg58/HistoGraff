@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Js</title>
+</head>
+<body style="background-color: aqua;">
+    <center><a style="border-radius: 20px;font-size: medium;font-family: Arial, Helvetica, sans-serif;" href="JsAdvance.js">Ir A EL javascript Avanzado</a></center>
+    <script>
+        function pc(marca,cpu,memoria){
+            this.marca=marca;
+            this.cpu=cpu;
+            this.memoria=memoria;
+
+        }
+        mipc=new pc ("OEM","Intel Core2","6Gb")
+        mipc2=new pc ("AsRock","AMD K8/SEMPRON","4Gb")
+        mipc3=new pc ("Asus","AMD AM2","2Gb")
+        var mensaje;
+
+
+        </script>
+        <h1>Seleccione un objeto?<br></h1>
+        <form action="" id="formu">
+            <input type="radio" name="1" onclick='alert("mipc\rmarca:" + mipc.marca + "\n"
+            + "cpu" + mipc.cpu + "\n"
+            + "memoria:" + mipc.memoria + "\n" );'>
+            mipc<br>
+            <input type="radio" name="1" onclick='alert("mipc2\rmarca:" + mipc2.marca + "\n"
+            + "cpu:" + mipc2.cpu + "\n" 
+            + "memoria:" + mipc2.memoria + "\n");'>
+            mipc2<br>
+            <input type="radio" name="1" onclick='alert("mipc3\rmarca:" + mipc3.marca + "\n"
+             + "cpu:" + mipc3.cpu + "\n" + "memoria" + mipc3.memoria + "\n");'>
+             mipc3<br>
+        </form>
+            <script>
+            function select_objeto(){
+                document.getElementById('casilla').focus()
+            }
+            function deselect_objeto(){
+                document.getElementById('casilla').blur()
+            }            
+
+            function limpiar(){
+                document.clear();
+            }
+            </script>
+            <p>
+            <input type="input" id="casilla" placeholder="Su nombre..." style="border-radius: 20px;">
+            <br><br>
+            <input type="button" onclick="select_objeto()" value="focus()">
+            <input type="button" onclick="deselect_objeto()" value="blur()">
+           </p>
+
+           <p id="texto">
+               Seleccione una parte de esto testo y despues le da en borrar seleccion
+               <button onclick="limpiar();" style="border-radius: 20px;">Borrar selecci&oacute;n</button>
+           </p>
+
+        <script type="text/javascript">
+
+           /* var minombre="Esteban Misas";
+            var funcion = function (texto){
+                alert(texto + this.minombre);
+            } 
+            var objeto = {minombre:" Repujencio"}
+            funcion.call(objeto,"Hola ");
+            funcion.call(null, "Hola ");
+
+            function exterior(caja,complementos,llave){
+
+                this.caja = caja;
+                this.complementos = complementos;
+                this.llave = llave;
+            }
+
+            function interior(procesador,velocidad,video,caja,complementos,llave){
+
+                this.procesador = procesador;
+                this.velocidad = velocidad;
+                this.video = video;
+                exterior.call(this,caja,complementos,llave);
+            }
+            pci = new interior("AMD K8 SEMPRON", 303, true, "Semetorre" , 2 , false);
+            alert("Las caracteristicas el pc son las siguientes"  + pci);
+            */
+        </script>
+
+        <button onclick="window.close();">Cerrar documento</button>
+        <br><br>
+        <script>
+            marcas=new String("Hola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadenaHola soy una cadena\n");
+            txtcolor= marcas.fontcolor("red");
+            document.write(txtcolor.fixed()); 
+            var cadena = "abcdefghijklm";
+            var caracter = cadena.charAt(3);
+            var codigo = cadena.charCodeAt(3);
+            document.write("----" +caracter + " " + codigo);
+            var mail = "carlos@carlosys.com";
+            var position = mail.lastIndexOf("@");
+            document.write("---   " +position + "\n ");
+            enlace=new String();
+            document.write(enlace.anchor("https://www.facebook.com/"));
+            var saludo="buenas";
+            var hola = saludo.concat(" <b> noches </b>");
+            document.write(hola);
+            //para convertir de numeros a letras
+            var cadena = String.fromCharCode(65,66,67,68,69,70,71,72,73,74,75);
+            document.write("</br></br>" + cadena.bold().fontcolor("orange"));
+            //para mostrar lo que se divide por dos PUNTOS split
+            var cadena1=new String("Cancion: I love you: Peter Lucinof");
+            var st = cadena1.split(":");
+            document.write("<br /><br />" + st[0] + "<br />" + st[2] + "<br />" + st[1]);
+            var sti = "Nombre: Evelio Esteban Misas Gomez";
+            var mellamo = sti.slice(8,23);
+            document.write("<br /><br />" + mellamo);
+            /*
+            var numero = prompt("ingrese el codigo si se lo sabe y si no se lo sabe igual haga el intento");
+            var nombre = prompt("ingrese su nombre");
+            if(numero=="12345"){
+                alert ("Usted escribio el codigo correcto");
+            }
+            else{
+                alert("Usted escribio el codigo incorrecto"); 
+            }
+            document.write("<br/>Hola " + nombre.big() +"!");
+            */
+            //convierte todo en mayuscula
+            var txt = new String("El lenguaje JavaScript megusta mucho<br />");
+            var rst = txt.toUpperCase();
+            document.write(rst);
+            //convierte todo en minuscula
+            var td = txt.toLowerCase();
+            document.write(td);
+            //Concatena,covierte en mayuscula y misnuscula añade color XD y tambien mustra los nombres por medio de un array
+            var t1= "Hola";
+            var t2= "Don Carlos. ";
+            var t3= "Don Esteban";
+            var rst1= t1.concat(t2,t1,t3);
+            document.write(rst1);
+            document.write(rst1.toLowerCase() + "<br />" + "<br />");
+            document.write(rst1.toUpperCase() + "<br />" + "<br />");
+            document.write(t1 + t2.fontcolor("black") +  " y " + t3.fontcolor("orange"));
+            document.write("<br />" + rst1.slice(4,14) + " y " + rst1.slice(20,31));
+            //Muestra el valor de pi y tambien lo redondea
+            var valorPI;
+            valorPI = Math.PI;
+            valorPI = Math.ceil(valorPI);
+            document.write("<br /><br />La variable PI contiene el valor de : " + valorPI);
+            //El objeto Date()
+            time = new Date();
+            hora = time.getHours();
+            minuto = time.getMinutes();
+            segundo = time.getSeconds();
+            if(hora<10){
+                hora="0"+hora;
+            }
+            if(minuto<10){
+                minuto = "0" + minuto;
+            }
+            if(segundo<10){
+                segundo = "0" + segundo;
+            }
+            rst = "<br /><br />Son las " + hora + " : " + minuto + " : " + segundo;
+            document.write("<center>" + rst.big().fontcolor("red")+  "</center>");
+            var date = new Date();
+            var año = date.getFullYear();
+            var mes = date.getMonth()+1;
+            var dia = date.getDate();
+            if(mes<10){
+                mes="0"+mes;
+            }
+            if(dia<10){
+                dia= "0"+dia;
+            }
+            var dt= "Hoy es: " + año + " : " + mes + " : " + dia;
+            document.write("<center>" + dt.big().fontcolor("red") + "</center>");  
+
+            //trabajando con array()
+            niños=new Array("Carlos ","Javier ","Esteban ","Adrian");
+            niñas=new Array("Valentina ", "Alejandra ", "Camila ","Estefania");
+            aliens=new Array("Moster ","Feusmuchus");
+            alumnos=niños.concat(niñas);
+            todos=alumnos.concat(aliens);
+            //aggrega mas elemtos a la matriz y muestra la longitud con new datos con push
+            varpush=niños.push("felipe","maximiliano");
+            document.write(varpush);
+            document.write("<br />total niñ@s<br />" + alumnos.join(" - "));
+            document.write("<br />Total alumnos<br />"+ todos.join(" | "));
+            //Pop() devuelve el ultimo elemnto de la matriz
+            borrado=niños.pop();
+            document.write(borrado);
+            //reverse() este metodo invierte el orden de colocacion de los elementos el primero pasa a ser el ultimo y viceversa
+            matriz=new Array("1","2","3","4");
+            matriz.reverse();
+            alert(matriz.join());
+            //shift() borra el primer elemto de la matriz devolviendo dicho elemto
+            matriz2=new Array("1","2","3","4");
+            borr=matriz2.shift();
+            document.write("<br /><br />" + borr);
+            //slice() extrae una fraccion de matriz delimitada por los argumentos inicio y fin generando un nuevo array
+            meses = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+            alert("La matriz meses tiene los siguientes datos:\n - " + (meses.join("\n -")) );
+            vacaciones= meses.slice(7,10);
+            alert("La matriz 'vacaciones' tiene los siguientes datos: \n" +(vacaciones.join("/")));
+            //sort(a,b) devuelve de manera ordenada los valores de un Array
+            function menormayor(a,b){
+                return a-b;
+            }
+            function mayormenor(a,b){
+                return b-a;
+            }
+            numeros = new Array(25,89,123,2,67,98,1000,45,345,42,77,15);
+            letras= new Array("a", "g", "b", "i", "c", "j", "z", "d", "x","h", "n", "i");
+            document.write("<strong>Numeros sin Ordenar: </strong>"+ numeros.join(", ")+ "<br /> <br />" );
+            document.write("<strong>Numeros ordenados por defecto: </strong>" + numeros.sort() + "<br />");
+            document.write("<strong>Numeros ordenados de menor a mayor: </strong>" + numeros.sort(menormayor) + "<br />");
+            document.write("<strong>Numeros ordenados de mayor a menor: </strong> " + numeros.sort(mayormenor) + "<br />");
+            document.write("<strong>Letras sin organizadas: " + letras.join() + "<br />");
+            document.write("<strong>Letras Organizadas: " + letras.sort() + "<br /><br />");
+            //splice() permite cambiar el contenido de una matriz
+            meses = new Array("Febrero","Marzo", "Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+            document.write("El contenido actual de la matriz es: " + meses.join("-") + "<br /><br />");
+            meses.splice(0,0,"Enero");
+            document.write("Añadiendo un elemento queda así: " + meses.join("-") + "<br />");
+            meses.splice(3,2,"april");
+            document.write("Modificado un elemto queda así :" +  meses.join("-"));
+        </script>
+        <br><br>
+</body>
+</html>
